@@ -50,5 +50,11 @@ if exist "dist\compress_first_mp4.exe" (
     echo Возможно, ошибка в самом скрипте или в пути.
     echo.
 )
+echo 📦 Копирую FFmpeg и FFprobe в dist/...
+copy /Y "ffmpeg.exe" "dist\" >nul
+copy /Y "ffprobe.exe" "dist\" >nul
+
+echo 🚀 Запускаю готовый EXE...
+start "" "dist\compress_first_mp4.exe"
 
 pause
